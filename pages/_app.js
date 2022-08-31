@@ -1,0 +1,19 @@
+import "../styles/globals.css"
+import "../styles/casilla_votacion.css"
+import "../styles/estilosadic.css"
+import "../styles/colaboraciones.css"
+
+import { MoralisProvider } from "react-moralis"
+import { NotificationProvider } from "web3uikit"
+
+function MyApp({ Component, pageProps }) {
+    return (
+        <MoralisProvider initializeOnMount={false}>
+            <NotificationProvider>
+                <Component {...pageProps} />
+            </NotificationProvider>
+        </MoralisProvider>
+    )
+}
+
+export default MyApp
